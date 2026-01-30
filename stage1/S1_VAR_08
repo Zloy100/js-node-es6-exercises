@@ -1,0 +1,17 @@
+function safeAdd(a, b) {
+  const big =
+    Math.abs(a) > Number.MAX_SAFE_INTEGER ||
+    Math.abs(b) > Number.MAX_SAFE_INTEGER;
+
+  if (big) {
+    const result = BigInt(a) + BigInt(b);
+    console.log("BigInt");
+    return result;
+  }
+
+  console.log("Number");
+  return a + b;
+}
+
+console.log(safeAdd(10, 20));
+console.log(safeAdd(Number.MAX_SAFE_INTEGER, 10));
