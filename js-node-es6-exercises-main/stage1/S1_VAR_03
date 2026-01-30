@@ -1,0 +1,15 @@
+const user = {
+  name: "Ala",
+  tags: []
+};
+
+user.tags.push("student");
+user.tags.push("js");
+
+console.log(user);
+
+try {
+  user = {};
+} catch (e) {
+  console.log("Error:", e.message);
+}

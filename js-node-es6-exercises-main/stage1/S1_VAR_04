@@ -1,0 +1,19 @@
+function typeLabel(value) {
+  if (value === null) return "null";
+  return typeof value;
+}
+
+const values = [
+  null,
+  undefined,
+  42,
+  "42",
+  true,
+  {},
+  [],
+  () => {}
+];
+
+for (const v of values) {
+  console.log(v, "=>", typeLabel(v));
+}
